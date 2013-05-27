@@ -1,0 +1,15 @@
+@import "sass/normalize";
+@import "sass/base";
+
+@media screen and (min-width:600px) {
+  @import "sass/small_tablet";
+}
+
+@media screen and (min-width:768px) {
+  @import "sass/tablet";
+}
+
+@media screen and (min-width:1000px) {
+  @import "sass/desktop";
+}
+

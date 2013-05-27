@@ -1,79 +1,16 @@
-
-<!doctype html>
-<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-  <title>Say Hello To Eric</title>
-  <meta name="description" content="Eric Lindstrom is a UX engineer, developer, and designer that builds responsive web applications.">
-  <meta name="keywords" content="eric lindstrom, lindstrom, lndstrm, ux, ux engineer, developer, designer, interactive, responsive, html5, mobile, tablet, applications, javascript, api, programmer, django">
-
-  <meta name="author" content="Eric Lindstrom">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-
-  <meta property="og:title" content="Say Hello To Eric" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://www.sayhellotoeric.com" />
-  <meta property="og:image" content="http://userserve-ak.last.fm/serve/_/294343/The+Fresh+Prince.jpg" />
-  <meta property="og:description" content="Eric Lindstrom is a UX engineer, developer, and designer that builds responsive HTML5 web applications.">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:url" content="http://www.sayhellotoeric.com">
-  <meta name="twitter:title" content="Say Hello To Eric">
-  <meta name="twitter:description" content="Eric Lindstrom is a UX engineer, developer, and designer that builds responsive HTML5 web applications.">
-  <meta name="twitter:image" content="http://userserve-ak.last.fm/serve/_/294343/The+Fresh+Prince.jpg">
-  <meta name="twitter:site" content="@ericlindstrom">
-  <meta name="twitter:creator" content="@ericlindstrom">
+---
+layout: default
+class: home post
+---
 
 
-  <link rel="stylesheet" href="/static/landing/css/shte.css">
-  
-</head>
-
-<body>
-<section>
-<div class="position">
-  <div class="container first">
-    <header></header>
-    <div id="main" role="main">
-      <h1>Hey! I’m Eric, Sr. UX Engineer at <a href="http://www.cukerinteractive.com/" target="_blank">Cuker Interactive.</a></h1>
-    </div>
-  </div> <!-- eo .container -->
-</div><!-- eo .position -->
-</section>
-<section>
-  <div class="position">
-    <div class="container share">
-        <ul id="shte_share">
-            <li class="email"><a href="mailto:eric.lindstrom@gmail.com">Email</a></li>
-            <li class="github"><a href="http://www.github.com/ericlindstrom/" target="_blank">GitHub</a></li>
-            <li class="instagram"><a href="http://www.instagram.com/ericlindstrom" target="_blank">Instagram</a></li>
-            <li class="lastfm"><a href="http://www.last.fm/user/eric_lindstrom/" target="_blank">LastFM</a></li>
-            <li class="linkedin"><a href="http://www.linkedin.com/pub/eric-lindstrom/8/14b/930" target="_blank">LinkedIn</a></li>
-            <li class="twitter"><a href="http://www.twitter.com/ericlindstrom/" target="_blank">Twitter</a></li>
-        </ul>
-    </div>
+{% for page in site.posts %}
+  {% if forloop.first %}
+  <div class="feature_image"><img src="{{ page.featureimage }}" /></div>
+  <div id="post" class="body">
+    <h1 class="title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
+    <p class="meta">{{ page.date | date_to_string }}</p>
+    {{ page.content }}
   </div>
-</section>
-
-<script>
-  var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-1316680-1'], ['_trackPageview']);
-  
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-
-</body>
-</html>
-
-
+  {% endif %}
+{% endfor %}
