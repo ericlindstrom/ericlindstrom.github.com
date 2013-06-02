@@ -2,6 +2,7 @@
 layout: post
 title: Intentions + Hello World
 bodyclass: intentions
+featureimage: null 
 ---
 
 As with every new iteration of a personal website my intentions to keep this up to date are pure. Topics to be discussed include design, code, beer, coffee, personal projects and much more.

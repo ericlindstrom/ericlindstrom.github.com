@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /heyitssam/
-Disallow: /website-sayhellotoali/
-Disallow: /website-aguynamedken/
-Disallow: /website-roswellthatendswell/
