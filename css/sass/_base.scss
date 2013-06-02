@@ -6,6 +6,13 @@
 $spacing: 15px;
 $border:1px solid #e0e0e0;
 $border_style:$border;
+$accent: #33CC66;
+
+.about .nav_about a,
+.post.list .nav_posts a { color:$accent; }
+
+::selection { background: #ffff66; }
+::-moz-selection { background: #ffff66; }
 
 * { 
   -webkit-box-sizing:border-box;
@@ -44,12 +51,14 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 { font-size:1.8em; line-height:.9em;}
+h2 { line-height:1em; }
 
 #header_title { text-align:center; }
 
 
 
 p { margin:0; padding:0 0 $spacing*2 0; }
+p.meta { padding-bottom:$spacing; }
 
 img { width:100%; }
 
@@ -77,7 +86,6 @@ section,
 
 header .container { padding: $spacing*1.5 $spacing*2; }
 footer .container { border-top:$border_style; padding:$spacing*2;}
-
 .feature_image { @include flpr(); padding-bottom:$spacing*2; }
 
 #main_nav { 
@@ -85,4 +93,13 @@ footer .container { border-top:$border_style; padding:$spacing*2;}
   ul { @include flpr($width:130px); list-style-type:none; padding:0; }
   ul li { @include flpr($width:auto); padding:0 1em 0 0; }
   ul li:last-child { padding-right:0; }
+}
+
+.post {
+  &.list {
+    .posts .entry { 
+      padding:$spacing 0; border-bottom:1px solid #c0c0c0; 
+      &:last-child { border:none; }
+    }
+  }
 }
