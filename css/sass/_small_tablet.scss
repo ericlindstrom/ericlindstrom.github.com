@@ -1,8 +1,12 @@
 .footer .position { max-width:660px; }
 .body { max-width:600px; margin:0 auto; }
 #header_title { @include flpr($width:auto) }
+.header { border:none; }
+
 #main_nav {
   float:right;
   width:auto;
+  margin-top:-1em;
   ul { margin-top:.25em; width:auto; }
+  ul li a { padding:1em; }
 }

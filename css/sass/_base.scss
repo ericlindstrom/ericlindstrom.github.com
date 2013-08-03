@@ -29,6 +29,8 @@ body {
   color:#444;
 }
 
+
+ol, 
 ul { margin:0; padding:0 0 0 1.1em; }
 
 blockquote { 
@@ -50,8 +52,8 @@ h1,h2,h3,h4,h5,h6 {
   font-weight:700;
 }
 
-h1 { font-size:1.8em; line-height:.9em;}
-h2 { line-height:1em; }
+h1, .h1 { font-size:1.4em; line-height:.9em;}
+h2, .h2 { line-height:1em; }
 
 #header_title { text-align:center; }
 
@@ -59,6 +61,12 @@ h2 { line-height:1em; }
 
 p { margin:0; padding:0 0 $spacing*2 0; }
 p.meta { padding-bottom:$spacing; }
+
+code { letter-spacing:1px; }
+
+p + pre,
+p + ul,
+p + ol { margin:-$spacing 0 $spacing*2;  }
 
 img { width:100%; }
 
@@ -75,6 +83,7 @@ section,
 .date { font-size:.8em; padding:0; }
 
 //header .container { border-bottom:$border_style; }
+.header { border-bottom:$border_style; }
 
 .highlight, blockquote { 
   @include flpr(); 
@@ -84,7 +93,8 @@ section,
   padding:$spacing*2 0;
 }
 
-header .container { padding: $spacing*1.5 $spacing*2; }
+header .container { padding: $spacing*1.5 $spacing*2 0; }
+header { margin-bottom:$spacing*2; }
 footer .container { border-top:$border_style; padding:$spacing*2;}
 .feature_image { @include flpr(); padding-bottom:$spacing*2; }
 
@@ -93,6 +103,12 @@ footer .container { border-top:$border_style; padding:$spacing*2;}
   ul { @include flpr($width:130px); list-style-type:none; padding:0; }
   ul li { @include flpr($width:auto); padding:0 1em 0 0; }
   ul li:last-child { padding-right:0; }
+  ul li a { @include flpr(); padding:.5em 0 1em; }
+}
+
+pre {
+  border-left: 7px solid #f0f0f0;
+  padding:$spacing;
 }
 
 .post {

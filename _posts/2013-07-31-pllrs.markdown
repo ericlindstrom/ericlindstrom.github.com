@@ -1,0 +1,21 @@
+---
+layout: post
+title: 'Introducing PLLRS: A Responsive&nbsp;CSS Column&nbsp;Structure'
+class: pllrs
+featureimage: /media/pllrs_title.jpg
+---
+
+PLLRS is a library for responsive uniform column structure. Built considering mobile first, It handles 4 breakpoints with media queries. 
+
+Here is an example of: 4 Columns at Desktop, 3 Columns at Large Tablet, 3 Columns at Small Tablet, and 2 columns at Mobile
+
+    <div class="pllrs4 _3_2">
+      <p class="column">1</p>
+      <p class="column">2</p>
+      <p class="column">3</p>
+      <p class="column">4</p>
+      <p class="column">5</p>
+      <p class="column">6</p>
+    </div>
+
+Head on over to <a href="http://www.pllrs.com" target="_blank">http://www.pllrs.com</a> and check it out.
