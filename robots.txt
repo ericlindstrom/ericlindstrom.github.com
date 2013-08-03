@@ -3,3 +3,6 @@ Disallow: /heyitssam/
 Disallow: /website-sayhellotoali/
 Disallow: /website-aguynamedken/
 Disallow: /website-roswellthatendswell/
+Disallow: /pllrs/
+Disallow: /website-goodeugene/
+Disallow: /django-ui-patterns/
