@@ -9,7 +9,7 @@ PLLRS is a library for responsive uniform column structure. Built considering mo
 
 Here is an example of: 4 Columns at Desktop, 3 Columns at Large Tablet, 3 Columns at Small Tablet, and 2 columns at Mobile
 
-    <div class="pllrs4 _3_2">
+    <div class="pllrs4 _332">
       <p class="column">1</p>
       <p class="column">2</p>
       <p class="column">3</p>
