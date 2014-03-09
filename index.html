@@ -3,14 +3,17 @@ layout: default
 class: home post
 ---
 
-
-{% for page in site.posts %}
-  {% if forloop.first %}
-  {% if page.featureimage %}<div class="feature_image"><img src="{{ page.featureimage }}" /></div>{% endif %}
-  <div id="post" class="body">
-    <h1 class="title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
-    <p class="meta">{{ page.date | date_to_string }}</p>
-    {{ page.content }}
+<div class="position">
+  <div class="container">
+  {% for page in site.posts %}
+    {% if forloop.first %}
+    {% if page.featureimage %}<div class="feature_image"><img src="{{ page.featureimage }}" /></div>{% endif %}
+    <div id="post" class="body">
+      <h1 class="title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
+      <p class="meta">{{ page.date | date_to_string }}</p>
+      {{ page.content }}
+    </div>
+    {% endif %}
+  {% endfor %}
   </div>
-  {% endif %}
-{% endfor %}
+</div>

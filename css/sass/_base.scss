@@ -7,6 +7,7 @@ $spacing: 15px;
 $border:1px solid #e0e0e0;
 $border_style:$border;
 $accent: #33CC66;
+$serif: 'Calluna', Georgia, serif;
 
 .about .nav_about a,
 .post.list .nav_posts a { color:$accent; }
@@ -27,6 +28,7 @@ body {
   font-weight:300;
   background:#f0f0f0;
   color:#444;
+  text-rendering:optimizeLegibility;
 }
 
 
@@ -43,7 +45,14 @@ blockquote {
   @include flpr(); background:#FFF; 
   padding-bottom:$spacing*4; 
 }
+.serif { 
+  font-family: $serif; 
+}
 
+.normal { font-weight:normal; }
+
+
+.sans,
 nav,
 h1,h2,h3,h4,h5,h6 {
   font-family:'futura-pt', Helvetica, Arial;
@@ -118,4 +127,116 @@ pre {
       &:last-child { border:none; }
     }
   }
+}
+
+.resume {
+  #wrap { padding-bottom:0; }
+  footer .container { border:none; }
+
+  #main_nav { 
+    width:100%;
+    ul { width:100%; }
+    ul li { 
+      width:100%; 
+      font-size:.9em; 
+      text-align:center; 
+      padding:.4em 0;
+
+      a { padding:0; }
+
+      &.nav_contact {
+        padding-right:0;
+        padding-top:0; padding-bottom:1em; 
+        a { float:none; width:auto; }
+        .pdf { margin-left:.5em; }
+      }
+    }
+  }
+
+  .skills { 
+    padding:0 0 1em; 
+    ul { float:left; margin:0; padding:.15em 0 0 0; }
+  }
+
+  h2.experience { 
+    border-bottom:1px solid #e0e0e0; 
+    padding-bottom:.2em; 
+    margin-bottom:1em; 
+  }
+
+  #content .job { 
+    padding:1em 0; 
+
+    &.odd {
+      background:#fbfbfb;
+      border-top:1px solid #f0f0f0;
+      border-bottom:1px solid #f0f0f0;
+    }
+
+    .info { @include flpr(); }
+    .description { @include flpr(); padding-top:1em; }
+    .description ul { 
+      margin:0; padding:0;
+
+      &.points { padding-bottom:1em; }
+      &.points li { 
+        padding:.2em 0; 
+       
+        &:first-child { padding-top:0; }
+      }
+    }
+
+  }
+
+  .title { line-height:1em; padding-bottom:.2em;}
+  .employer { color:#888; line-height:1em; padding-bottom:.2em; }
+
+  .slash_list li { 
+    @include flpr($width:auto); 
+    color:#888;
+    padding:0;
+    list-style-type:none; 
+    &:after { content: '/'; padding:0 .2em; }
+    &:last-child:after { content: ''; padding:0; }
+  }
+
+  .recent_works { 
+    h3 { padding-bottom:5px; border-bottom:$border; margin-bottom:5px; }
+    .column { margin-bottom:30px; }
+    ul { margin:0; padding:0 0 0 1px; }
+    ul li  { 
+      list-style-type:none; padding:3px 0; 
+      &:first-child { padding-top:10px; }
+    }
+    .column.last ul li { padding:7px 0; }
+  }
+
+  sup { color:#c0c0c0; }
+
+  #content a { 
+    color:$accent;
+    &:hover { color:#777; }
+  } 
+
+
+}
+
+@media print {
+  .header { border:none; }
+
+  .pdf,
+  .client_list,
+  .recent_works,
+  sup,
+  .footer,
+  #main_nav { display:none; }
+  .job .info { @include flpr($width:40%); }
+  .job .description { float:right; position:relative; width:56%; }
+
+  a:after { 
+    font-family:$serif;
+    font-size:.8rem; 
+    text-transform:none; content:" (" attr(href) ")"; 
+  }
+
 }

@@ -1,9 +1,14 @@
 ---
 layout: default
 ---
-{% if page.featureimage %}<div class="feature_image"><img src="{{ page.featureimage }}" /></div>{% endif %}
-<div id="post" class="body">
-  <h1 class="title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
-  <p class="meta">{{ page.date | date_to_string }}</p>
-  {{ content }}
+
+<div class="position">
+  <div class="container">
+    {% if page.featureimage %}<div class="feature_image"><img src="{{ page.featureimage }}" /></div>{% endif %}
+    <div id="post" class="body">
+      <h1 class="title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
+      <p class="meta">{{ page.date | date_to_string }}</p>
+      {{ content }}
+    </div>
+  </div>
 </div>
