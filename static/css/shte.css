@@ -442,7 +442,10 @@ a {
 @media screen and (min-width:600px) {
   .position { width:600px; }
 
-  #content { margin-top:200px; }
+
+  @media screen and (min-height:500px) {
+    #content { margin-top:200px; }
+  }
 
   h3, .h3 {
     font-size: 1.8em;
