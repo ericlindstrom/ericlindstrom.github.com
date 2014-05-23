@@ -411,6 +411,8 @@ body {
   color:#333;
 }
 
+#wrap,
+footer,
 .container,
 section {
   float:left; position:relative; width:100%;
