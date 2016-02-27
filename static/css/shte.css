@@ -441,8 +441,8 @@ a {
   text-decoration:none;
 }
 
-@media screen and (min-width:600px) {
-  .position { width:600px; }
+@media screen and (min-width:630px) {
+  .position { width:630px; }
 
 
   @media screen and (min-height:500px) {
